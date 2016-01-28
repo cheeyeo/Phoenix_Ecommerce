@@ -1,0 +1,19 @@
+<h2>Your cart</h2>
+<div class="cart">
+  <table>
+    <thead>
+      <tr>
+        <td>Product</td>
+        <td>Quantity</td>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for line_item <- @line_items do %>
+        <tr>
+          <td><%= line_item.product.name %></td>
+          <td><%= line_item.quantity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
